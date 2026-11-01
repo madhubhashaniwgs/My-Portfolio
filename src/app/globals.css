@@ -1,0 +1,145 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 225 100% 98.8%;        /* #F8FAFF */
+    --foreground: 245 37% 13%;            /* #17152E */
+    --surface: 0 0% 100%;                 /* #FFFFFF */
+    --surface-foreground: 245 37% 13%;
+    --card: 0 0% 100%;
+    --card-foreground: 245 37% 13%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 245 37% 13%;
+    --primary: 262 83% 58%;               /* #7C3AED */
+    --primary-foreground: 0 0% 100%;
+    --secondary: 243 75% 59%;             /* #4F46E5 */
+    --secondary-foreground: 0 0% 100%;
+    --muted: 220 20% 94%;
+    --muted-foreground: 240 11% 37%;      /* #55556A */
+    --accent: 192 91% 36%;                /* #0891B2 */
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 12% 90%;
+    --input: 240 12% 90%;
+    --ring: 262 83% 58%;
+    --radius: 0.75rem;
+
+    --brand-gradient: linear-gradient(110deg, #8B5CF6 0%, #6366F1 48%, #22D3EE 100%);
+    --glass-bg: rgba(255, 255, 255, 0.75);
+    --glass-border: rgba(23, 21, 46, 0.08);
+  }
+
+  .dark {
+    --background: 233 45% 6.5%;          /* #090B18 */
+    --foreground: 210 40% 98%;            /* #F8FAFC */
+    --surface: 230 40% 12%;               /* #12162A */
+    --surface-foreground: 210 40% 98%;
+    --card: 230 40% 12%;                  /* #12162A */
+    --card-foreground: 210 40% 98%;
+    --popover: 230 40% 14%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 258 90% 66%;               /* #8B5CF6 */
+    --primary-foreground: 0 0% 100%;
+    --secondary: 239 84% 67%;             /* #6366F1 */
+    --secondary-foreground: 0 0% 100%;
+    --muted: 231 35% 18%;
+    --muted-foreground: 229 20% 77%;      /* #B9BED1 */
+    --accent: 187 86% 53%;                /* #22D3EE */
+    --accent-foreground: 233 45% 6.5%;
+    --destructive: 0 62.8% 40.6%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 231 30% 20%;
+    --input: 231 30% 20%;
+    --ring: 258 90% 66%;
+
+    --brand-gradient: linear-gradient(110deg, #8B5CF6 0%, #6366F1 48%, #22D3EE 100%);
+    --glass-bg: rgba(18, 22, 42, 0.7);
+    --glass-border: rgba(255, 255, 255, 0.08);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  html {
+    scroll-behavior: smooth;
+    color-scheme: dark light;
+  }
+  body {
+    @apply bg-background text-foreground antialiased selection:bg-aurora-purple/30 selection:text-foreground;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+    min-height: 100vh;
+  }
+}
+
+/* Glassmorphism utility classes */
+.glass-panel {
+  background: var(--glass-bg);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid var(--glass-border);
+}
+
+.aurora-gradient-text {
+  background: var(--brand-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.aurora-border-glow {
+  position: relative;
+}
+
+.aurora-border-glow::before {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  background: var(--brand-gradient);
+  border-radius: inherit;
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.aurora-border-glow:hover::before {
+  opacity: 0.6;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(139, 92, 246, 0.25);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(139, 92, 246, 0.5);
+}
+
+/* Reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
