@@ -2,7 +2,8 @@
 
 import * as React from "react";
 import Link from "next/link";
-import { X, FileText, Github, Linkedin, ExternalLink } from "lucide-react";
+import { X, FileText, Github, Linkedin } from "lucide-react";
+import { profileData } from "@/data/profile";
 
 interface NavItem {
   name: string;
@@ -84,7 +85,7 @@ export function MobileNav({ isOpen, onClose, navItems, activeSection }: MobileNa
         {/* Footer Actions */}
         <div className="pt-6 border-t border-border/50 flex flex-col gap-3">
           <a
-            href="/documents/resume-placeholder.pdf"
+            href={profileData.resumeDownloadUrl}
             download
             className="flex items-center justify-center gap-2 w-full py-2.5 px-4 rounded-xl bg-aurora-gradient text-white font-medium text-sm shadow-md hover:opacity-90 transition-opacity"
           >
@@ -94,7 +95,7 @@ export function MobileNav({ isOpen, onClose, navItems, activeSection }: MobileNa
 
           <div className="flex items-center justify-center gap-4 pt-2 text-muted-foreground">
             <a
-              href="https://github.com"
+              href={profileData.githubUrl}
               target="_blank"
               rel="noopener noreferrer"
               className="p-2 rounded-lg hover:text-foreground hover:bg-muted/50 transition-colors"
@@ -103,7 +104,7 @@ export function MobileNav({ isOpen, onClose, navItems, activeSection }: MobileNa
               <Github className="w-5 h-5" />
             </a>
             <a
-              href="https://linkedin.com"
+              href={profileData.linkedinUrl}
               target="_blank"
               rel="noopener noreferrer"
               className="p-2 rounded-lg hover:text-foreground hover:bg-muted/50 transition-colors"

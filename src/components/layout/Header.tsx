@@ -5,6 +5,7 @@ import Link from "next/link";
 import { ThemeSwitcher } from "./ThemeSwitcher";
 import { MobileNav } from "./MobileNav";
 import { useActiveSection } from "@/hooks/useActiveSection";
+import { profileData } from "@/data/profile";
 import { Menu, Command, Download, Sparkles } from "lucide-react";
 
 const NAV_ITEMS = [
@@ -119,7 +120,7 @@ export function Header() {
 
             {/* Quick CV Download */}
             <a
-              href="/documents/resume-placeholder.pdf"
+              href={profileData.resumeDownloadUrl}
               download
               className="hidden sm:inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-medium bg-aurora-gradient text-white shadow-sm hover:opacity-90 transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-aurora-purple"
             >
