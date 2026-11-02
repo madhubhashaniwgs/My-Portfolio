@@ -55,3 +55,4 @@ export function RevealOnScroll({
     </motion.div>
   );
 }
+
