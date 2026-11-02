@@ -109,10 +109,10 @@ export function ContactSection() {
             GET IN TOUCH
           </span>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-foreground">
-            Let's <span className="text-cyan-600 dark:text-cyan-400">Connect</span>
+            Let&apos;s <span className="text-cyan-600 dark:text-cyan-400">Connect</span>
           </h2>
           <p className="max-w-2xl text-base sm:text-lg text-muted-foreground pt-1 leading-relaxed">
-            I'm always open to discussing internships, full-time opportunities, collaborations, or exciting software development projects.
+            I&apos;m always open to discussing internships, full-time opportunities, collaborations, or exciting software development projects.
           </p>
         </RevealOnScroll>
 
@@ -123,10 +123,10 @@ export function ContactSection() {
           <RevealOnScroll className="lg:col-span-5 space-y-6">
             <div className="space-y-2">
               <h3 className="text-2xl font-bold text-foreground flex items-center gap-2">
-                Let's Talk <span className="text-2xl">👋</span>
+                Let&apos;s Talk <span className="text-2xl">👋</span>
               </h3>
               <p className="text-sm text-muted-foreground leading-relaxed">
-                Whether you have an internship opportunity, a project idea, or just want to connect, I'd be happy to hear from you. Feel free to reach out anytime.
+                Whether you have an internship opportunity, a project idea, or just want to connect, I&apos;d be happy to hear from you. Feel free to reach out anytime.
               </p>
             </div>
 
@@ -246,7 +246,7 @@ export function ContactSection() {
                   Send Me a Message
                 </h3>
                 <p className="text-xs text-muted-foreground pt-1">
-                  Have a project, internship opportunity, or collaboration in mind? Fill out the form below and I'll get back to you as soon as possible.
+                  Have a project, internship opportunity, or collaboration in mind? Fill out the form below and I&apos;ll get back to you as soon as possible.
                 </p>
               </div>
 
@@ -316,7 +316,7 @@ export function ContactSection() {
                   <textarea
                     rows={4}
                     {...register("message")}
-                    placeholder="Hello Saranga Madhubhashani, I'd like to get in touch regarding..."
+                    placeholder="Hello Saranga Madhubhashani, I&apos;d like to get in touch regarding..."
                     className="w-full px-4 py-3 rounded-xl border border-border bg-surface text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-cyan-500/50 dark:focus:ring-cyan-400/50 resize-y transition-all"
                   />
                   {errors.message && (

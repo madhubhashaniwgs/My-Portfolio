@@ -25,7 +25,7 @@ export function HeroSection() {
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-cyan-600 dark:bg-cyan-400 opacity-75"></span>
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-cyan-600 dark:bg-cyan-400"></span>
               </span>
-              Hello, I'm
+              Hello, I&apos;m
             </div>
 
             <div className="space-y-2">
