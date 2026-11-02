@@ -18,28 +18,30 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  title: "Software Engineering Portfolio | IT Undergraduate (UoM)",
+  title: "Saranga Madhubhashani | Portfolio",
   description:
-    "Portfolio of an IT undergraduate at the University of Moratuwa, Sri Lanka, preparing for Software Engineering internship opportunities. Showcasing full-stack engineering, concurrency control, system design, and practical software projects.",
+    "Portfolio of Saranga Madhubhashani, an Information Technology undergraduate at the University of Moratuwa aspiring to be a Software Engineer. Explore projects, technical skills, education, and experience.",
   keywords: [
+    "Saranga Madhubhashani",
     "Software Engineer",
     "Internship",
     "University of Moratuwa",
     "Sri Lanka",
     "Full-Stack Developer",
-    "Java",
-    "Spring Boot",
-    "React",
+    "Backend Developer",
     "Next.js",
+    "React",
     "TypeScript",
+    "Node.js",
+    "Spring Boot",
     "PostgreSQL",
     "Docker",
   ],
-  authors: [{ name: "IT Undergraduate, University of Moratuwa" }],
+  authors: [{ name: "Saranga Madhubhashani" }],
   openGraph: {
-    title: "Software Engineering Portfolio | IT Undergraduate (UoM)",
+    title: "Saranga Madhubhashani | Portfolio",
     description:
-      "Portfolio of an IT undergraduate at the University of Moratuwa, Sri Lanka, preparing for Software Engineering internship opportunities.",
+      "Portfolio of Saranga Madhubhashani, an Information Technology undergraduate at the University of Moratuwa aspiring to be a Software Engineer.",
     type: "website",
     locale: "en_US",
   },
@@ -52,6 +54,25 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
+      <head>
+  <script
+    dangerouslySetInnerHTML={{
+      __html: `
+        if (typeof window !== 'undefined') {
+          window.history.scrollRestoration = 'manual';
+          window.scrollTo(0, 0);
+         
+          if (window.location.hash) {
+            window.history.replaceState(null, null, window.location.pathname);
+          }
+          window.addEventListener('beforeunload', function () {
+            window.scrollTo(0, 0);
+          });
+        }
+      `,
+    }}
+  />
+</head>
       <body className="min-h-screen flex flex-col font-sans">
         <Providers>
           <ScrollProgressBar />
