@@ -2,7 +2,8 @@
 
 import * as React from "react";
 import Link from "next/link";
-import { ArrowUp, Github, Linkedin, Mail, Heart } from "lucide-react";
+import { ArrowUp, Github, Linkedin, Mail } from "lucide-react";
+import { profileData } from "@/data/profile";
 
 export function Footer() {
   const scrollToTop = () => {
@@ -22,17 +23,19 @@ export function Footer() {
               </span>
             </div>
             <p className="text-sm text-muted-foreground max-w-md leading-relaxed">
-              Designed and built for Software Engineering internship opportunities. BSc in Information Technology at the University of Moratuwa, Sri Lanka.
+              {profileData.shortBio}
             </p>
-            <div className="flex items-center gap-2 pt-1">
-              <span className="relative flex h-2.5 w-2.5">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75" />
-                <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500" />
-              </span>
-              <span className="text-xs font-medium text-emerald-600 dark:text-emerald-400">
-                Actively seeking Software Engineering Internship
-              </span>
-            </div>
+            {profileData.isInternshipAvailable && (
+              <div className="flex items-center gap-2 pt-1">
+                <span className="relative flex h-2.5 w-2.5">
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75" />
+                  <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500" />
+                </span>
+                <span className="text-xs font-medium text-emerald-600 dark:text-emerald-400">
+                  Available for Software Engineering Internship
+                </span>
+              </div>
+            )}
           </div>
 
           {/* Column 2: Quick Links */}

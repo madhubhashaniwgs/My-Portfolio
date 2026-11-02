@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { ArrowRight, Code2, Sparkles, Terminal, Laptop } from "lucide-react";
+import { profileData } from "@/data/profile";
 
 export default function Home() {
   return (
@@ -8,7 +9,7 @@ export default function Home() {
       <section className="min-h-[70vh] flex flex-col justify-center items-center text-center py-16 space-y-8">
         <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-aurora-purple/30 bg-aurora-purple/10 text-aurora-purple text-xs font-mono tracking-wide">
           <Sparkles className="w-3.5 h-3.5 animate-pulse text-aurora-cyan" />
-          <span>University of Moratuwa • BSc in Information Technology</span>
+          <span>{profileData.institution} • {profileData.degree}</span>
         </div>
 
         <h1 className="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight max-w-4xl leading-tight">
@@ -17,7 +18,7 @@ export default function Home() {
         </h1>
 
         <p className="text-base sm:text-xl text-muted-foreground max-w-2xl leading-relaxed">
-          Aspiring Software Engineer focused on full-stack application development, concurrency management, and distributed architectures.
+          {profileData.shortBio}
         </p>
 
         <div className="flex flex-wrap items-center justify-center gap-4 pt-4">
@@ -29,7 +30,7 @@ export default function Home() {
             <ArrowRight className="w-4 h-4" />
           </a>
           <a
-            href="/documents/resume-placeholder.pdf"
+            href={profileData.resumeDownloadUrl}
             download
             className="inline-flex items-center gap-2 px-6 py-3 rounded-xl border border-border bg-surface/60 hover:bg-surface text-foreground font-medium text-sm transition-all duration-200"
           >
