@@ -5,6 +5,7 @@ import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { ScrollProgressBar } from "@/components/layout/ScrollProgressBar";
 import { AuroraBackground } from "@/components/animations/AuroraBackground";
+import { Toaster } from "@/components/ui/toaster";
 
 export const viewport: Viewport = {
   width: "device-width",
@@ -59,6 +60,7 @@ export default function RootLayout({
             <main className="flex-1 pt-24">{children}</main>
             <Footer />
           </AuroraBackground>
+          <Toaster />
         </Providers>
       </body>
     </html>
