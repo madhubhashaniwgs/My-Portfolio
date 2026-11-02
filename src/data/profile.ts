@@ -1,56 +1,66 @@
 import { Profile } from "@/types/portfolio";
 
 export const profileData: Profile = {
-  // Configurable display name placeholder - update with candidate's actual full name
-  fullName: "Software Engineering Undergraduate",
-  title: "Undergraduate Software Engineer",
-  institution: "University of Moratuwa, Sri Lanka",
+  fullName: "Saranga Madhubhashani",
+
+  title: "IT Undergraduate | Aspiring Software Engineer",
+
+  institution: "University of Moratuwa",
+
   degree: "BSc in Information Technology",
-  currentStatus: "Undergraduate Student",
+
+  currentStatus: "IT Undergraduate at University of Moratuwa",
+
   location: "Sri Lanka",
 
-  // Contact and Social Links (Placeholders until user provides specific URLs)
-  email: "contact@example.com",
-  githubUrl: "https://github.com",
-  linkedinUrl: "https://linkedin.com",
-  resumeDownloadUrl: "/documents/resume-placeholder.pdf",
+  whatsappUrl: "https://wa.me/+94717597998",
+
+  email: "sarangamwg@gmail.com",
+
+  githubUrl: "https://github.com/madhubhashaniwgs",
+
+  linkedinUrl: "https://www.linkedin.com/in/saranga-madhubhashani",
+  
+  // Resume placeholder path updated to CV naming if needed
+  resumeDownloadUrl: "/documents/Saranga-cv.pdf",
 
   headline: {
-    primary: "Building Digital Experiences.",
-    secondary: "Solving Real-World Problems.",
+    primary: "Saranga",
+    secondary: "Madhubhashani",
   },
 
   rotatingPhrases: [
-    "Full-Stack Applications",
-    "Scalable Software Solutions",
-    "Modern Web Experiences",
-    "Meaningful Digital Products",
+    "Aspiring Software Engineer",
+    "Full-Stack Developer",
+    "Backend Developer",
+    "Problem Solver",
   ],
 
   shortBio:
-    "Information Technology undergraduate at the University of Moratuwa with a strong foundation in full-stack software development, database design, and concurrent transaction management.",
+    "IT undergraduate at the University of Moratuwa with a strong foundation in software development and a passion for building reliable, scalable applications. Interested in solving real-world problems through clean code, thoughtful architecture, and modern technologies.",
 
   fullBio: [
-    "I am an Information Technology undergraduate at the University of Moratuwa, Sri Lanka, actively preparing for Software Engineering internship opportunities.",
-    "My academic journey has built a disciplined foundation in data structures, algorithms, object-oriented design, database systems, and computer architecture.",
-    "Through individual and collaborative software projects, I enjoy translating theoretical concepts into robust applications—exploring concurrency control, transactional integrity, RESTful architecture, and interactive web interfaces.",
+    "I am an Information Technology undergraduate at the University of Moratuwa with a strong interest in software engineering and application development. I enjoy understanding complex problems and transforming ideas into practical, reliable software solutions.",
+
+    "Through individual and academic projects, I have gained hands-on experience in full-stack development, backend engineering, REST API integration, database design, and application development using modern technologies. These experiences have helped me strengthen my technical foundation while developing a practical approach to software engineering.",
+
+    "I value clean code, maintainable architecture, problem-solving, and continuous learning. I am particularly interested in building scalable applications, exploring backend technologies, and improving the overall quality of software systems.",
   ],
 
   coreInterests: [
     "Full-Stack Web Development",
-    "Concurrent Transaction Management",
-    "Backend Architecture & Microservices",
-    "Mobile Applications & Sensor Telemetry",
-    "Database Modeling & Performance",
+    "Backend Engineering & REST APIs",
+    "Software Architecture & Design",
+    "Database Design & Management",
+    "Cloud Computing & DevOps",
+    "Mobile Application Development",
   ],
 
   problemSolvingApproach:
-    "I approach software engineering by decomposing complex requirements into modular, testable components, ensuring database integrity through proper constraints and locking strategies, and prioritizing maintainable code over quick patches.",
+    "I approach software development by first understanding the problem, identifying its requirements, and designing a suitable solution. I focus on writing clean, maintainable code, choosing appropriate data structures and technologies, and building reliable applications through continuous testing and improvement.",
 
   careerObjectives:
-    "Seeking a Software Engineering internship where I can contribute to mission-critical systems, collaborate with experienced engineering teams, and expand my technical depth in modern software architecture.",
+    "Seeking a Software Engineering Internship where I can apply my technical knowledge, contribute to real-world software projects, learn from experienced engineers, and grow into a well-rounded software engineer.",
 
-  // STRICT RULE: Set to false until candidate explicitly confirms availability
-  isInternshipAvailable: false,
+  isInternshipAvailable: true,
 };
-
