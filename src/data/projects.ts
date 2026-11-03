@@ -135,7 +135,7 @@ export const projectsData: Project[] = [
 
     status: "Completed",
     githubUrl: "https://github.com/madhubhashaniwgs/SyncReserve.git",
-    liveDemoUrl: "syncreserve-frontend.vercel.app",
+    liveDemoUrl: "https://syncreserve.duckdns.org/",
     imageUrl: "/images/SyncReserve.png",
     featured: true,
   },
@@ -276,7 +276,7 @@ export const projectsData: Project[] = [
 
     status: "Completed",
     githubUrl: "https://github.com/madhubhashaniwgs/My-Portfolio.git",
-    liveDemoUrl: "",
+    liveDemoUrl: "https://my-portfolio-kappa-five-56.vercel.app/",
     imageUrl: "/images/Portfolio1.png",
     featured: true,
   },
