@@ -209,7 +209,7 @@ export const projectsData: Project[] = [
     status: "Completed",
     githubUrl: "https://github.com/madhubhashaniwgs/MockMate.git",
     liveDemoUrl: "https://mockmate-frontend-delta.vercel.app",
-    imageUrl: "/images/MockMate.png",
+    imageUrl: "/images/Mockmate.png",
     featured: true,
   },
   {
