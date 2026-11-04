@@ -357,7 +357,7 @@ export const projectsData: Project[] = [
     status: "Ongoing",
     githubUrl: "https://github.com/madhubhashaniwgs/DriveGuard.git",
     liveDemoUrl: "",
-    imageUrl: "/images/DriveGuard.jpeg",
+    imageUrl: "/images/DriveGuard.png",
     featured: true,
   },
   {
